@@ -1,5 +1,5 @@
 class Tester
-tester = gets.chomp
+tester = nil
 while (tester != "q" )
   tester = gets.chomp
   if tester.to_f.to_s == tester.to_s || tester.to_i.to_s == tester.to_s
