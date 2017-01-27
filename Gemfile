@@ -2,4 +2,6 @@
 source 'http://rubygems.org'
 
 # # Tell it we want to use mrspec version 0.3.1
-gem 'mrspec', '= 0.3.1'
+gem 'rspec', '= 3.5'
+gem 'minitest', '~> 5.2'
+gem 'rake'

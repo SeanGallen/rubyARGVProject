@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+
+class Tester
+tester = nil
+def num
+  if orderNumber < 0 || orderNumber > 6
+    puts "Invalid selection: " + orderNumber
+  end
+  puts "test this number"
+end
+while (tester != "q" && tester != "Q")
+  tester = gets.chomp
+  if tester.to_f.to_s == tester.to_s || tester.to_i.to_s == tester.to_s
+    orderNumber = tester.to_i
+  else
+    puts "test the letter"
+  end
+end
+puts "End of Test"
+end
