@@ -15,9 +15,6 @@ class BowlingGameTest < Minitest::Test
     assert_equal 0, @bowlingGame.frame
   end
 
-  def test_a_bowling_ball_roll_can_change_the_score
-  end
-
   def test_a_gutter_ball_does_not_change_the_score
     score = 0
     assert_equal score, @bowlingGame.score
