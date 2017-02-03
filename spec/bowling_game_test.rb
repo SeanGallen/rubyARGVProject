@@ -11,6 +11,10 @@ class BowlingGameTest < Minitest::Test
     assert_equal 0, @bowlingGame.score
   end
 
+  def test_game_starts_at_the_1st_frame
+    assert_equal 0, @bowlingGame.frame
+  end
+
   def test_a_bowling_ball_roll_can_change_the_score
   end
 
@@ -28,4 +32,5 @@ class BowlingGameTest < Minitest::Test
     assert_equal score, @bowlingGame.roll
     assert_equal 0, @bowlingGame.score
   end
+
 end
