@@ -33,4 +33,8 @@ class BowlingGameTest < Minitest::Test
     assert_equal 0, @bowlingGame.score
   end
 
+  def test_end_of_game_message_appears
+    string = "Game Over \n The Final Score is #{@bowlingGame.score}"
+    assert_equal string, @bowlingGame.end_of_game_message
+  end
 end
