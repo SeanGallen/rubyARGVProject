@@ -8,8 +8,6 @@ class BowlingGame
   def roll
     if gutter
       score
-    else
-      score = 10
     end
   end
 
@@ -18,6 +16,6 @@ class BowlingGame
   end
 
   def end_of_game_message
-    "Game Over \n The Final Score is #{@score}"
+    "Game Over \n The Final Score is #{score}"
   end
 end
