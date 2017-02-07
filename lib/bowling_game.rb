@@ -7,9 +7,9 @@ class BowlingGame
 
   def roll
     if gutter
-      @score
+      score
     else
-      @score = 10
+      score = 10
     end
   end
 
