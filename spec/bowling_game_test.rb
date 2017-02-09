@@ -15,6 +15,7 @@ class BowlingGameTest < Minitest::Test
     score = 0
     assert_equal score, @bowlingGame.score
     assert_equal score, @bowlingGame.gutter
+    6.times { @bowlingGame.roll(0) }
     assert_equal 0, @bowlingGame.score
   end
 
