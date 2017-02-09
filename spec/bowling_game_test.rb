@@ -11,14 +11,6 @@ class BowlingGameTest < Minitest::Test
     assert_equal 0, @bowlingGame.score
   end
 
-  def test_if_a_roll_goes_into_the_gutter_the_score_does_not_change
-    score = 0
-    assert_equal score, @bowlingGame.score
-    assert_equal score, @bowlingGame.gutter
-    6.times { @bowlingGame.roll(0) }
-    assert_equal 0, @bowlingGame.score
-  end
-
   def test_if_a_pin_is_knocked_down_the_score_increases
     pin =1
     @bowlingGame.roll(pin)
@@ -26,9 +18,20 @@ class BowlingGameTest < Minitest::Test
     pin = 5
     @bowlingGame.roll(pin)
     assert_equal 6, @bowlingGame.score
+    6.times { @bowlingGame.roll(4) }
+    assert_equal 30, @bowlingGame.score
+  end
+
+  def test_a_spare_produces_the_right_score
+    skip
+    @bowlingGame.roll(4)
+    @bowlingGame.roll(6)
+    @bowlingGame.roll(3)
+    assert_equal 16, @bowlingGame.score
   end
 
   def test_end_of_game_message_appears
+    skip
     string = "Game Over \n The Final Score is #{@bowlingGame.score}"
     assert_equal string, @bowlingGame.end_of_game_message
   end
