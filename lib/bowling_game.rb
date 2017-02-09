@@ -1,18 +1,15 @@
 class BowlingGame
-  attr_reader :score, :frame
+  attr_reader :score
   def initialize
     @score = 0
-    @frame = 0
   end
 
-  def roll
-    if gutter
-      score
-    end
+  def roll(pin)
+    @score += pin
   end
 
   def gutter
-    true
+    pin = 0
   end
 
   def end_of_game_message
