@@ -31,7 +31,6 @@ class BowlingGameTest < Minitest::Test
   end
 
   def test_end_of_game_message_appears
-    skip
     string = "Game Over \n The Final Score is #{@bowlingGame.score}"
     assert_equal string, @bowlingGame.end_of_game_message
   end
